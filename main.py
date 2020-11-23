@@ -21,6 +21,7 @@ from urllib.request import urlopen
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 youremail = 'please enter your email here'
 passw = "enter your password here"
+flag = 0
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 while True:
         try:                                
@@ -48,9 +49,10 @@ while True:
                         #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                         #To check the given password and if it is wrong send email
                         def check():
-                                global tr
+                                global tr,flag
                                 if en.get()==passw:
                                         window.destroy() #exit if password is correct
+                                        flag = 1
                                         quit()
                                 else:
                                         tr-=1
@@ -143,6 +145,8 @@ Image At The Time Of Login :-'''
                         e.place(x = 190,y=21)
                         b = Button(window,text="SUBMIT",bg = "gray10",fg="lime",font=("",13),width=37,command = check)
                         b.place(x = 32, y = 70)
+                        if flag==1:
+                                break
                         #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                         def pop(): #Pop up the window after every 10 seconds to grab the attention of user
                                 try:
