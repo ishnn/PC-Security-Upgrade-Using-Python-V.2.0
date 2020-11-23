@@ -5,6 +5,8 @@ To Run The Script:-
 
 step 1 : Add your email address in youremail variable
 
-step 2 : To run on boot make the shortcut file of main.py then cut it and then press the start button and search for shell:startup.
+step 2 : Add your desired in passw variable
+
+step 3 : To run on boot make the shortcut file of main.py then cut it and then press the start button and search for shell:startup.
 
 Additional tip : You can make exe of main.py after adding your email using auto-py-to-exe library(make sure you are selecting windowbased option) then make its shortcut and paste it in shell:startup.
